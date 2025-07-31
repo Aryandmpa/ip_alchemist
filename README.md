@@ -37,26 +37,34 @@ Ensure you have [Termux](https://f-droid.org/en/packages/com.termux/) installed.
 ```bash
 pkg update && pkg upgrade -y
 pkg install python git nmap dnscrypt-proxy macchanger tor -y
-
+```
 📥 Installation
+
+```
 git clone https://github.com/Aryandmpa/ip_alchemist.git
 cd ip_alchemist
 pip install -r requirements.txt
-
+```
 
 📦 If requirements.txt fails, manually run:
+```
 pip install requests colorama pyfiglet geoip2 qrcode
+```
 
 🗺️ GeoIP Setup
+
 Manually download the GeoLite2-City.mmdb file (registration required) and place it in the project root directory.
 
 Or use:
+```
 wget -O GeoLite2-City.mmdb "<VALID_URL_FROM_MAXMIND>"
+```
 Replace the placeholder URL in ip_alchemist.py with your download link if you prefer automatic setup.
 
 ⚙️ Running The Tool
+```
 python ip_alchemist.py
-
+```
 
 🧪 Example Menu Interface
 ====== IP Alchemist Menu ======
@@ -91,10 +99,12 @@ QR codes saved in proxy_qrcodes/
 Kill-switch & TOR integration are configurable
 
 🤝 Contributing
+```
 git checkout -b feature/YourFeature
 # make changes
 git commit -m "Add new feature"
 git push origin feature/YourFeature
+```
 Pull requests welcome!
 
 
@@ -103,29 +113,7 @@ This tool is intended for ethical & educational purposes only. The author is not
 
 📞 Contact
 For support or collaboration, open an issue on GitHub.
-
-
----
-
-## ⚙️ Shell Script (Optional Setup Script: `install.sh`)
-
-```bash
-#!/data/data/com.termux/files/usr/bin/bash
-
-echo "📦 Installing IP Alchemist"
-
-pkg update && pkg upgrade -y
-pkg install python git nmap dnscrypt-proxy macchanger tor -y
-
-echo "📁 Cloning Repository..."
-git clone https://github.com/Aryandmpa/ip_alchemist.git
-cd ip_alchemist || exit
-
-echo "🐍 Installing Python Requirements"
-pip install -r requirements.txt
-
-echo "📄 Done! To start:"
-echo "➡️ cd ip_alchemist && python ip_alchemist.py"
+telegram[t.me/hylocalhost]
 
 🧠 Pro Tips
 ✨ QR Code Proxies: Share proxy config by scanning QR!
